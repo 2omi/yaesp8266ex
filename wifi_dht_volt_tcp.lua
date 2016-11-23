@@ -1,5 +1,4 @@
 HOST = "io.adafruit.com"
-ADAFRUIT_KEY = "28f74649c7f44508a5ca529b1b9e2eec"
 
 function dweet(temperature,humidity,voltage)
   conn=net.createConnection(net.TCP,0) 
@@ -7,7 +6,7 @@ function dweet(temperature,humidity,voltage)
   conn:on("connection", function(conn, payload) 
           print("connected") 
           conn:send("GET /api/groups/66368/send.json?"
-          .. "x-aio-key=28f74649c7f44508a5ca529b1b9e2eec"
+          .. "x-aio-key=xxxxxxxxxxxxxxxxxxxxxxxx_your_adafruit_key"
           .. "&temperature=" .. temperature
           .. "&humidity=" .. humidity 
           .. "&voltage=" .. voltage 
