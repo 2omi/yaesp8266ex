@@ -1,0 +1,16 @@
+add wifi AP reset
+add LED blinking for asking WIFI attention (reset, SSID/pass, ...)
+evaluate SSL firmaware connection
+clean the code
+add some comments
+enumerate NodeMCU included modules
+add help to compile firmware, site adress ....
+add help flashing firmware to Huzzah ESP8266
+exemple using ESPLORER8266 framework to easy programming
+explain ADAFRUIT web interface usage
+add some battery power measurements
+evaluate life time for this 3xAA 1,5V batteries
+add links to biblio and interestings web docs
+
+--- hmm - a lot of work to do for this simple exemple test
+
