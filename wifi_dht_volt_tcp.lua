@@ -1,3 +1,4 @@
+-- "IOT cloud" server address
 HOST = "io.adafruit.com"
 
 function dweet(temperature,humidity,voltage)
@@ -16,6 +17,7 @@ function dweet(temperature,humidity,voltage)
           .. "Accept: */*\r\n\r\n") end)
   conn:on("disconnection", function(conn, payload)
           print("disconnected")
+	  -- hard sleep 5 minutes then reboot
 	  node.dsleep(60*1000*1000) end)
   conn:connect(80, HOST)
 end
@@ -81,5 +83,6 @@ elseif (wifi.sta.getip() == nil) then
   tmr.alarm(0,100,1,check_wifi)
 -- End section init.lua
 else
+  -- wait 2 seonds - to be sure the WIFI is on and reconnected
   tmr.alarm(1,2000,tmr.ALARM_SINGLE,read_temp_hum_voltage)
 end
